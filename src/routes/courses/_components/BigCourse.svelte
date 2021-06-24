@@ -12,14 +12,6 @@
   class="{className} bg-neutrals-d01 flex flex-col justify-between overflow-hidden px-5 py-6 md:p-8 xl:pt-10 rounded-xl relative "
   href="/"
 >
-  <!-- <Image
-      class="object-cover rounded-2xl mr-5"
-      size="w-[140px] h-[140px]"
-      fit="crop"
-      src={course.poster}
-      alt={course.title.en}
-    /> -->
-
   <!-- Gradient & Background-->
   <div class="absolute top-1/2 right-0 bg-gradient-to-b from-neutrals-d01 w-full h-1/2" />
   <Image
@@ -57,9 +49,3 @@
     </div>
   </div>
 </a>
-
-<style>
-  .my-container {
-    min-width: 357.33px;
-  }
-</style>

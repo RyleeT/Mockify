@@ -11,6 +11,7 @@
   class="{className} bg-neutrals-d02 col-span-2 flex flex-col px-5 py-6 md:p-8 xl:p-10 rounded-xl"
   href="/"
 >
+  <!-- TODO: Add svg background-->
   <!-- <Image
         class="object-cover rounded-2xl mr-5"
         size="w-[140px] h-[140px]"

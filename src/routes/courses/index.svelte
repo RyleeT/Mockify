@@ -1,6 +1,5 @@
 <script>
   import { courses, featuredCourse, highlightedCourses, spotlight } from '@metafy/lib/mock';
-  import FormControl from '@metafy/components/FormControl.svelte';
   import MetaTags from '@metafy/components/MetaTags.svelte';
   import { BigCourse, Course, FeaturedCourse, HighlightedCourse, Spotlight } from './_components';
 </script>

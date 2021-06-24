@@ -1,16 +1,13 @@
 <script>
-  import { getContext } from 'svelte';
   import { fly } from 'svelte/transition';
   import { expanded, isSidebarHiddenMobile } from './_helpers/stores.js';
   import { chatState } from '@metafy/lib/stores';
-  import { BREAKPOINTS, STATIC_URL } from '@metafy/lib/constants';
+  import { BREAKPOINTS } from '@metafy/lib/constants';
 
   import BrowseGamesButton from '@metafy/components/BrowseGamesButton.svelte';
   import SidebarButton from './SidebarButton.svelte';
   import UserNav from './UserNav.svelte';
   import GuestNav from './GuestNav.svelte';
-  // import UserDropdown from './UserDropdown.svelte';
-  // import Notification from './Notification.svelte';
   import MobileNavs from './MobileNavs.svelte';
 
   import MetafySymbol from '@metafy/assets/svgs/metafy_symbol.svg';

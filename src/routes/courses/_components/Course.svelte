@@ -5,7 +5,7 @@
   export let course: ICourse;
 </script>
 
-<a class="my-container pop-transition bg-neutrals-d01 flex p-3 rounded-xl" href="/">
+<a class="course-container pop-transition bg-neutrals-d01 flex p-3 rounded-xl" href="/">
   <Image class="mr-5 object-cover rounded-xl w-29" src={course.poster} alt={course.title.en} />
 
   <div class=" flex flex-col justify-between my-3">
@@ -22,7 +22,7 @@
 </a>
 
 <style>
-  .my-container {
+  .course-container {
     min-width: 357.33px;
   }
 </style>
