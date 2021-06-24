@@ -1,0 +1,9 @@
+<svg width="21" height="13" viewBox="0 0 21 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="15.2445" cy="7.90482" r="3.40482" fill="var(--primaryColor, currentColor)" fill-opacity="0.24"
+    stroke="var(--primaryColor, currentColor)" />
+  <path d="M17.7294 10.3896L20 12.5" stroke="var(--primaryColor, currentColor)" stroke-linecap="round"
+    stroke-linejoin="round" />
+  <path
+    d="M16.389 1H9.46396H5.54707C3.82036 1 2.35578 2.26831 2.10902 3.9773L1.30672 9.53401C1.14492 10.6546 2.01411 11.6583 3.14634 11.6583V11.6583C3.73257 11.6583 4.28444 11.3818 4.63532 10.9121L6.56249 8.33281C6.69365 8.15728 6.89992 8.05391 7.11904 8.05391H9.46396"
+    stroke="var(--primaryColor, currentColor)" stroke-linecap="round" />
+</svg>

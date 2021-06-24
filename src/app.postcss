@@ -1,0 +1,50 @@
+/* Write your global styles here, in PostCSS syntax */
+
+@tailwind base;
+
+/* TODO: Add real fonts here */
+:root {
+}
+
+body {
+  @apply w-full h-full m-0 leading-normal min-h-screen relative;
+  @apply text-base text-neutrals-l30;
+}
+
+#mockify-app {
+}
+
+.container {
+  @apply mx-auto px-4 md:px-8;
+}
+
+/* TODO: Fix styling and remove hidden visibility on arrow */
+.tippy-box[data-theme='black'] {
+  @apply bg-neutrals-d30 text-sm rounded-md;
+  border: 1px solid rgba(130, 147, 164, 0.3);
+  .tippy-content {
+    @apply px-3 py-2;
+  }
+  .tippy-svg-arrow {
+    fill: #333;
+    height: 16px;
+    text-align: initial;
+    visibility: hidden;
+    width: 16px;
+  }
+}
+
+.tippy-box[data-placement^='right'] > .tippy-svg-arrow:after,
+.tippy-box[data-placement^='right'] > .tippy-svg-arrow > svg {
+  right: 11px;
+  top: calc(50% - 3px);
+  transform: rotate(-90deg);
+}
+
+.pop-transition {
+  @apply transform-gpu transition-all duration-300 ease-in-out hover:bg-neutrals-d02 hover:-translate-y-1.5 hover:z-10;
+}
+
+@tailwind components;
+
+@tailwind utilities;
