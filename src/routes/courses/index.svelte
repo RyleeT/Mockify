@@ -25,12 +25,14 @@
   <div class="col-span-3">
     <h2 class="leading-none text-white text-xl tracking-0.02">Latest</h2>
     <!-- TODO: Make this a slider -->
-    <div
-      class="card-holder grid grid-flow-col xs:gap-x-4 gap-x-8 overflow-x-auto xl:overflow-y-visible pt-6"
-    >
-      {#each courses.slice(1, 4) as course}
-        <Course {course} />
-      {/each}
+    <div class="grid xl:container">
+      <div
+        class="card-holder grid grid-flow-col xs:gap-x-4 gap-x-8 overflow-x-auto xl:overflow-y-visible pt-6"
+      >
+        {#each courses.slice(1, 4) as course}
+          <Course {course} />
+        {/each}
+      </div>
     </div>
     <div class="flex justify-end">
       <h2
