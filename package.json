@@ -42,7 +42,6 @@
 		"@sveltejs/svelte-virtual-list": "^3.0.1",
 		"@tailwindcss/line-clamp": "^0.2.1",
 		"cookie": "^0.4.1",
-		"dayjs": "^1.10.5",
 		"grapheme-splitter": "^1.0.4",
 		"graphql-tag": "^2.12.4",
 		"meilisearch": "^0.19.0",

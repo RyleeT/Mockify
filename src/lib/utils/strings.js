@@ -1,7 +1,7 @@
 import { browser } from '$app/env';
 import { uniqueBy } from './array';
 import { STATIC_URL } from '../constants';
-import { dayjs } from './dayjs';
+// import { dayjs } from './dayjs';
 
 /**
  * @returns {string} UUIDv4
@@ -18,10 +18,10 @@ export function uuidv4() {
  * @param {string} time - ISO8601 Time String
  * @returns {string} Formatted time, like "2:00 pm" or "7:35 am"
  */
-export function formatTime(time, timezone = 'UTC') {
-  const datetime = dayjs(time).tz(timezone);
-  return formatTimeDatetime(datetime);
-}
+// export function formatTime(time, timezone = 'UTC') {
+//   const datetime = dayjs(time).tz(timezone);
+//   return formatTimeDatetime(datetime);
+// }
 
 /**
  * @param {DateTime} datetime - dayjs DateTime object
@@ -35,30 +35,30 @@ export function formatTimeDatetime(datetime) {
  * @param {number} duration
  * @returns {string} Formatted video duration
  */
-export function formatVideoDuration(duration) {
-  // Examples: "5:02", "47:34", "3:35:29"
-  const durationObj = dayjs.duration(duration, 'seconds');
-  return durationObj.format(durationObj.hours() > 1 ? 'H:mm:ss' : 'm:ss');
-}
+// export function formatVideoDuration(duration) {
+//   // Examples: "5:02", "47:34", "3:35:29"
+//   const durationObj = dayjs.duration(duration, 'seconds');
+//   return durationObj.format(durationObj.hours() > 1 ? 'H:mm:ss' : 'm:ss');
+// }
 
 /**
  * @param {string} date - ISO8601 Time String
  * @param {*} timezone
  * @returns {string} Formatted date
  */
-export function formatDate(date, timezone = 'UTC') {
-  let dateTimeFormatted = '';
-  const datetime = dayjs(date).tz(timezone);
-  const diff = datetime.diff(dayjs().tz(timezone), 'day');
-  // Date is either in the distant future, or in the past
-  if (diff > 1 || diff < 0) {
-    dateTimeFormatted += datetime.format('MMM DD');
-    dateTimeFormatted + ' at ' + formatTime(date, timezone);
-  } else {
-    dateTimeFormatted = datetime.calendar();
-  }
-  return dateTimeFormatted;
-}
+// export function formatDate(date, timezone = 'UTC') {
+//   let dateTimeFormatted = '';
+//   const datetime = dayjs(date).tz(timezone);
+//   const diff = datetime.diff(dayjs().tz(timezone), 'day');
+//   // Date is either in the distant future, or in the past
+//   if (diff > 1 || diff < 0) {
+//     dateTimeFormatted += datetime.format('MMM DD');
+//     dateTimeFormatted + ' at ' + formatTime(date, timezone);
+//   } else {
+//     dateTimeFormatted = datetime.calendar();
+//   }
+//   return dateTimeFormatted;
+// }
 
 /**
  * @param {string} date - ISO8601 Time String
@@ -66,12 +66,12 @@ export function formatDate(date, timezone = 'UTC') {
  * @param {string} timezone
  * @returns {string} Formatted date - `Apr 30, 3:00 pm - 4:00 pm`
  */
-export function formatDateWithRange(date, duration, timezone = 'UTC') {
-  const datetime = dayjs(date).tz(timezone);
-  return `${datetime.format('MMM D')}, ${formatTimeDatetime(
-    datetime
-  )} - ${formatTimeDatetime(datetime.add(duration, 'minutes'))}`;
-}
+// export function formatDateWithRange(date, duration, timezone = 'UTC') {
+//   const datetime = dayjs(date).tz(timezone);
+//   return `${datetime.format('MMM D')}, ${formatTimeDatetime(datetime)} - ${formatTimeDatetime(
+//     datetime.add(duration, 'minutes')
+//   )}`;
+// }
 
 /**
  * @param {number} month
@@ -154,11 +154,7 @@ export function humanizeDurationHours(duration, shortHand = false) {
  * @returns {string}
  */
 export function pluralize(word, count, includeCount = true) {
-  return (
-    (includeCount ? count.toString() + ' ' : '') +
-    word +
-    (count !== 1 ? 's' : '')
-  );
+  return (includeCount ? count.toString() + ' ' : '') + word + (count !== 1 ? 's' : '');
 }
 
 /**
@@ -209,9 +205,7 @@ export function getAchievementIconURL(a) {
  */
 export function displayPlanGames(plan) {
   const uniqueGames = uniqueBy(
-    plan.lessons
-      .filter((l) => l.game || l.coachGame)
-      .map((m) => (m.game ? m.game : m)),
+    plan.lessons.filter((l) => l.game || l.coachGame).map((m) => (m.game ? m.game : m)),
     'id'
   );
   return displayUniqueGames(uniqueGames);
@@ -225,9 +219,7 @@ export function displayUniqueGames(uniqueGames) {
   if (uniqueGames.length === 0) {
     return '0 games';
   }
-  return uniqueGames.length > 1
-    ? `${uniqueGames.length} games`
-    : uniqueGames[0].title.en;
+  return uniqueGames.length > 1 ? `${uniqueGames.length} games` : uniqueGames[0].title.en;
 }
 
 /**
