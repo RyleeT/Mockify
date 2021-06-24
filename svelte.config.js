@@ -1,6 +1,7 @@
 import path from 'path';
 import preprocess from 'svelte-preprocess';
 import svg from '@netulip/rollup-plugin-svg';
+import netlify from '@sveltejs/adapter-netlify';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -15,6 +16,7 @@ const config = {
   ],
 
   kit: {
+    adapter: netlify(),
     // hydrate the <div id="mockify-app"> element in src/app.html
     target: '#mockify-app',
     vite: {
