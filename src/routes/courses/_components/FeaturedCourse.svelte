@@ -6,7 +6,7 @@
   export let course: IFeaturedCourse;
 </script>
 
-<!-- TODO: Add hover state or button for clickthrough -->
+<!-- TODO: Add hover state or button for clickthrough & more responsive p/m -->
 <a
   class="{className} bg-neutrals-d02 col-span-2 flex flex-col px-5 py-6 md:p-8 xl:p-10 rounded-xl"
   href="/"
